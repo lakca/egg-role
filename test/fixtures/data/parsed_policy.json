@@ -1,0 +1,10 @@
+{
+  "router": {
+    "test.testOne": ["role", "role2"],
+    "test.testTwo": ["role2"]
+  },
+  "service": {
+    "test.testOne": ["role", "role2"],
+    "test.testTwo": ["role"]
+  }
+}
