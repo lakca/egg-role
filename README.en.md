@@ -2,6 +2,9 @@ egg-role
 ---
 > role control plugin for eggjs.
 
+[![Build Status](https://www.travis-ci.org/lakca/egg-role.svg?branch=master)](https://www.travis-ci.org/lakca/egg-role)
+[![codecov](https://codecov.io/gh/lakca/egg-role/branch/master/graph/badge.svg)](https://codecov.io/gh/lakca/egg-role)
+
 Feature:
 ---
 - All access controls are based on configuration.

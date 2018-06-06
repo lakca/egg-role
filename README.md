@@ -2,6 +2,9 @@ egg-role
 ---
 > egg 角色控制插件
 
+[![Build Status](https://www.travis-ci.org/lakca/egg-role.svg?branch=master)](https://www.travis-ci.org/lakca/egg-role)
+[![codecov](https://codecov.io/gh/lakca/egg-role/branch/master/graph/badge.svg)](https://codecov.io/gh/lakca/egg-role)
+
 特点：
 ---
 - 所有访问控制均基于配置文件。
