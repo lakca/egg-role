@@ -28,7 +28,7 @@ describe('test utils', function() {
     assert(origin.role2[2]);
   });
 
-  it('getPolicy, when string, recogonized as policy file path.', function() {
+  it('getPolicy, when string and json/js file, recogonized as policy file path.', function() {
     const fp = path.resolve(__dirname, './fixtures/data/policy.json');
     const origin = mockRequire(path.resolve(__dirname, './fixtures/data/policy.json'));
     const got = utils.getPolicy(fp);
@@ -39,11 +39,15 @@ describe('test utils', function() {
     assert(origin.role2[2]);
   });
 
-  it('getPolicy, when other types, return empty object.', function() {
-    [ null, undefined, []].forEach(e => {
-      const got = utils.getPolicy(e);
-      assert.deepEqual(got, {});
-    });
+  it('getPolicy, when string and yaml file, recogonized as policy file path.', function() {
+    const fp = path.resolve(__dirname, './fixtures/data/policy.yaml');
+    const origin = mockRequire(path.resolve(__dirname, './fixtures/data/policy.json'));
+    const got = utils.getPolicy(fp);
+    assert.deepEqual(got, origin);
+    delete got.role;
+    delete got.role2[2];
+    assert(origin.role);
+    assert(origin.role2[2]);
   });
 
   it('rolesIn.', function() {

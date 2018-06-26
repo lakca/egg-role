@@ -1,0 +1,8 @@
+role:
+  - router:test.testOne
+  - service:test.testOne
+  - service:test.testTwo
+role2:
+  - router:test.testOne
+  - router:test.testTwo
+  - service:test.testOne
