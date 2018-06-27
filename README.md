@@ -19,12 +19,12 @@ exports.role = {
   policy: {
     'user_admin': [ // role is 'user_admin'
       'router:updateUser', // the role can access router which name is 'updateUser'
-      'controller:user.listUsers' // the role can access controller which name is 'user.listUsers' ignoring what the router is.
+      'service:user.listUsers' // the role can access service which name is 'user.listUsers' ignoring what the router is.
     ],
     'comment_inspector': [
       'router:denyComment',
       'router:stickComment',
-      'controller:comment.listComments'
+      'service:comment.listComments'
     ]
   }
 };
