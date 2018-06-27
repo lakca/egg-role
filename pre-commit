@@ -1,0 +1,14 @@
+#!/bin/bash
+
+entry=$PWD
+curDir=`dirname $(realpath $0)`
+
+echo $entry
+echo $curDir
+
+cd $curDir
+cd ../..
+
+npm run lint && npm run cover
+
+cd $entry

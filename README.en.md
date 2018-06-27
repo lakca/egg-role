@@ -30,3 +30,7 @@ exports.role = {
 };
 ```
 [Default Configuration](./config/config.default.js)
+
+Before commit your code:
+---
+`cp pre-commit .git/hooks/`

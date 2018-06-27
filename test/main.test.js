@@ -36,6 +36,7 @@ describe('main test', function() {
         .get('/api/users')
         .accept('json')
         .expect(200)
+        .expect('reachable', 'controller')
         .expect([ 123, 321 ]);
     });
 
@@ -48,6 +49,7 @@ describe('main test', function() {
           name: 'sbname',
         })
         .expect(403)
+        .expect('reachable', 'controller')
         .expect({
           message: 'Permission denied.',
         });
@@ -59,8 +61,8 @@ describe('main test', function() {
         .get('/api/users')
         .accept('json')
         .expect(403)
-        .expect({
-          message: 'Permission denied.',
+        .expect(function(res) {
+          return !res.headers.reachable;
         });
     });
 
@@ -73,6 +75,7 @@ describe('main test', function() {
           name: 'sbname',
         })
         .expect(200)
+        .expect('reachable', 'service')
         .expect({
           name: 'sbname',
         });

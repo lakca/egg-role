@@ -30,3 +30,7 @@ exports.role = {
 };
 ```
 [默认配置](./config/config.default.js)
+
+提交代码之前：
+---
+`cp pre-commit .git/hooks/`
