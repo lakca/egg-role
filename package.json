@@ -1,6 +1,6 @@
 {
   "name": "egg-role",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "role control of eggjs",
   "eggPlugin": {
     "name": "role"
